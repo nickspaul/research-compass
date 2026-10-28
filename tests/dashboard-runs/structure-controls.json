@@ -1,0 +1,23 @@
+{
+  "scope": "Package checker controls, not model behavior",
+  "results": [
+    {
+      "control": "protected_reference_mutation",
+      "detected": true,
+      "exit_code": 1,
+      "expected_detection": "Dashboard changed protected source"
+    },
+    {
+      "control": "original_body_mutation",
+      "detected": true,
+      "exit_code": 1,
+      "expected_detection": "Dashboard changed original Skill body"
+    },
+    {
+      "control": "duplicate_dashboard_id",
+      "detected": true,
+      "exit_code": 1,
+      "expected_detection": "duplicate case id"
+    }
+  ]
+}

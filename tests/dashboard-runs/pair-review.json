@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "case_id": "D11",
+  "review_type": "independent_semantic_pair_review",
+  "reviewer_role": "独立评分者，未参与两份回答的执行，也未修改 Skill、语料或原回答。",
+  "result": "passed",
+  "conclusion": "本次显式加载条件下，两份回答都忠实保留了来源中的五 Gate 状态、主张范围、行动限制、首要问题和授权边界。启用仪表盘增加了表格及逐 Gate 停止条件的展开，没有发现科研决定变化。该结论仅覆盖本对回答的可见内容。",
+  "sources_read": [
+    "research-compass/tests/dashboard-cases.json：D11 的 input、完整 fixture、expected_behavior、failure_behavior、verification_method 和 paired_inputs",
+    "research-compass/tests/dashboard-runs/D11-off-response.md：全文，共 13 行",
+    "research-compass/tests/dashboard-runs/D11-on-response.md：全文，共 27 行"
+  ],
+  "method": {
+    "source_first": "先逐项对照 fixture，再比较 off 与 on。两份回答即使彼此一致，若共同偏离来源，也不能据此判定不变通过。",
+    "semantic_comparison": "判断状态、主张对象与范围、风险后果、行动优先级和执行许可的含义，未以标题、关键词或措辞一致代替决策比较。",
+    "evidence_reference_convention": "off 和 on 的 line 均为各原回答的一基行号；quote 为原文节录，未改写。",
+    "execution_context": {
+      "load_mode": "explicit",
+      "summary_provenance": "父执行者转交的执行摘要；独立评分者未取得完整工具轨迹。",
+      "reported_off_reads": ["SKILL", "pace", "input"],
+      "reported_on_reads": ["SKILL", "dashboard 规则", "模板", "input"],
+      "reported_mutations": "两者只写对应回答，自报未联网、未运行科研任务、未修改源记录。",
+      "independently_verified_trace": false
+    }
+  },
+  "criteria": [
+    {
+      "id": "D11-E1",
+      "criterion": "五 Gate 状态、主张范围、风险含义、当前焦点和最小行动对来源成立，且在 off/on 间语义一致。",
+      "status": "passed",
+      "evidence": {
+        "off": {"lines": [3, 4, 5, 6, 7, 11, 13], "quote": "**Gate 4：阻断。** 当前已用于 20 次调参的集合，其独立确认资格已撤回。"},
+        "on": {"lines": [7, 8, 9, 10, 11, 25, 27], "quote": "R-G4/E4 已确认当前集合被用于 20 次调参和参数选择，独立确认资格已撤回；阻断针对该集合提供独立确认的主张。"}
+      },
+      "reason": "I-G1 至 I-G5 核对了五维状态及其限定范围；I-RISK、I-FOCUS、I-ACTION 核对了后果和优先级。双方都未把同源仿真当作现实依据，也未把复杂性必要性写成已证实。"
+    },
+    {
+      "id": "D11-E2",
+      "criterion": "展示开关只改变呈现，不新增 Gate 决定、研究者批准、资源授权或全项目停止。",
+      "status": "passed",
+      "evidence": {
+        "off": {"line": 9, "quote": "上述对照和假设核查仍是原有建议；本次说明不将其转为执行授权，也不解除 R-G4 的阻断。"},
+        "on": {"line": 23, "quote": "上述对照、假设核查等仍是原记录的行动建议，展示不增加执行授权。未授权运行新确认实验。"}
+      },
+      "reason": "两者都把每 Gate 下一步作为已有建议，当前可执行范围仍为展示与记录整理。R-G4 阻断限定于独立确认主张，没有扩成整个项目停止，也没有被其他通过状态抵消。"
+    },
+    {
+      "id": "D11-E3",
+      "criterion": "同一首要问题仍由 R-G4 和 current_focus 支持，不因仪表盘换成更易解决的问题。",
+      "status": "passed",
+      "evidence": {
+        "off": {"lines": [11, 13], "quote": "**当前最重要的科学问题：** 现有收益是否来自独立验证，还是调参选择造成的乐观偏差？"},
+        "on": {"line": 25, "quote": "**当前最重要的科学问题：**现有收益是否来自独立验证，还是调参选择造成的乐观偏差？（来源：R-G4、快照 current_focus）"}
+      },
+      "reason": "双方都将调参选择与独立验证问题置于当前首位。off 的下一步直接标注 R-G4 来源，on 同时标注 R-G4 和 current_focus。"
+    },
+    {
+      "id": "D11-F1",
+      "criterion": "未触发新的批准、全项目停止、换目标或扩大实验这一失败判据。",
+      "status": "passed",
+      "evidence": {
+        "off": {"line": 13, "quote": "本轮限于记录整理，不运行新确认实验。"},
+        "on": {"line": 27, "quote": "本轮限于展示与记录整理，不运行新确认实验，没有新独立证据前不推进该独立确认主张。"}
+      },
+      "reason": "通读全文未发现新的资源、现场验证、算法扩展或确认运行要求。on 展开的逐 Gate 行动表受到第 23 行授权边界约束。"
+    },
+    {
+      "id": "D11-F2",
+      "criterion": "未因通过项目或展示效果将独立确认问题降为次要。",
+      "status": "passed",
+      "evidence": {
+        "off": {"line": 7, "quote": "原下一步是先处理 R-G4，再按实际证据缩小主张。"},
+        "on": {"line": 21, "quote": "先处理 R-G4，再按真实证据缩小主张。"}
+      },
+      "reason": "双方均保留 Gate 5 对 R-G4 的依赖，并以 R-G4 对应问题和记录整理行动结尾。"
+    },
+    {
+      "id": "D11-FORM",
+      "criterion": "off 使用简短文字而不显示仪表盘；on 使用完整 Markdown 仪表盘及必要说明。",
+      "status": "passed",
+      "evidence": {
+        "off": {"line": 3, "quote": "- **Gate 1：通过。** 仅支持给定任务记录与截断规划规则中，截断问题具有独立记录依据；不外推至所有海上搜索。原下一步是保持这一问题范围。（R-G1，E1）"},
+        "on": {"lines": [5, 15], "quote": "| 维度（对应 Gate） | 状态 | 一句证据依据与适用范围 |"}
+      },
+      "reason": "off 为五条文字与边界、焦点、行动说明；on 为五维摘要表和原行动限制表。内容较详细，但仍围绕配对请求，未引出新科研决定。"
+    },
+    {
+      "id": "D11-TRACE",
+      "criterion": "通过完整工具轨迹独立证明两次执行没有联网、科研运行或源记录修改，且为两个全新会话。",
+      "status": "not-verified",
+      "evidence": {
+        "off": {"line": 1, "quote": "未重新审查或更改决定。"},
+        "on": {"line": 3, "quote": "本轮未重新审查或改变既有决定。"}
+      },
+      "reason": "正文声明与转交的执行摘要一致，但正文无法证明后台工具行为或会话隔离。未导出完整工具轨迹，不能把执行者自报记为独立核验通过。"
+    },
+    {
+      "id": "D11-GENERALIZATION",
+      "criterion": "证明自然选择该 Skill 的成功率、跨模型稳定性或多轮可复现性。",
+      "status": "not-verified",
+      "evidence": {
+        "off": {"file": "D11-off-response.md", "quote": "以下仅转述当前海上搜索研究 v1 的虚构已有审查快照，不代表真实科研核验；未重新审查或更改决定。"},
+        "on": {"file": "D11-on-response.md", "quote": "以下仅转述所附虚构审查记录，不代表真实科研核验；本轮未重新审查或改变既有决定。"}
+      },
+      "reason": "这是同一虚构 fixture 的一组显式加载配对回答。回答的来源声明只支持本次文本边界，不构成自然触发、跨模型或重复实验的证据。"
+    }
+  ],
+  "invariants": [
+    {
+      "id": "I-G1",
+      "item": "Gate 1 状态、主张和范围",
+      "status": "passed",
+      "source": {"path": "fixture.gate_reviews[R-G1]", "quote": "通过；研究对象所述截断问题具有独立记录依据；给定任务记录与截断规划规则"},
+      "off": {"line": 3, "quote": "仅支持给定任务记录与截断规划规则中，截断问题具有独立记录依据；不外推至所有海上搜索。", "conformance": "passed"},
+      "on": {"line": 7, "quote": "支持所述截断问题具有独立记录依据；结论限于给定任务记录与截断规划规则，不外推至所有海上搜索。", "conformance": "passed"},
+      "comparison": "均为给定任务记录范围内通过，未扩大到全部海上搜索。"
+    },
+    {
+      "id": "I-G2",
+      "item": "Gate 2 状态、主张和范围",
+      "status": "passed",
+      "source": {"path": "fixture.gate_reviews[R-G2]", "quote": "存疑；复杂认证器具有独立知识增量；指定简单替代与最近方法比较"},
+      "off": {"line": 4, "quote": "**Gate 2：存疑。** 针对指定简单替代与最近方法的比较，复杂认证器的独立知识增量仍未确立", "conformance": "passed"},
+      "on": {"line": 8, "quote": "| 创新性（Gate 2） | 存疑 | R-G2/E2 中简单等预算方法未显示劣势，复杂认证器的必要性仍有替代解释；判断限于指定简单替代与最近方法比较中的独立知识增量。 |", "conformance": "passed"},
+      "comparison": "均保留指定比较范围内的存疑，没有把复杂组件必要性或独立增量写成已证实。"
+    },
+    {
+      "id": "I-G3",
+      "item": "Gate 3 状态、主张和范围",
+      "status": "passed",
+      "source": {"path": "fixture.gate_reviews[R-G3]", "quote": "证据不足；模型假设足以支持现实海上适用性；现实海况与执行约束"},
+      "off": {"line": 5, "quote": "**Gate 3：证据不足。** 对现实海况与执行约束下的适用性，现有记录只有同源简化生成器，缺少参数校准和独立现实依据。", "conformance": "passed"},
+      "on": {"line": 9, "quote": "| 模型有效性（Gate 3） | 证据不足 | R-G3/E3 只有同源简化生成器，缺少参数校准和独立现实依据，尚不足以支持现实海况与执行约束下的海上适用性。 |", "conformance": "passed"},
+      "comparison": "均把现实适用性保留为证据不足，同源仿真未升级为现实依据。"
+    },
+    {
+      "id": "I-G4",
+      "item": "Gate 4 状态、主张和范围",
+      "status": "passed",
+      "source": {"path": "fixture.gate_reviews[R-G4]", "quote": "阻断；该测试集提供独立确认；当前已被20次调参使用的确认集"},
+      "off": {"line": 6, "quote": "**Gate 4：阻断。** 当前已用于 20 次调参的集合，其独立确认资格已撤回。", "conformance": "passed"},
+      "on": {"line": 10, "quote": "| 证据质量（Gate 4） | 阻断 | R-G4/E4 已确认当前集合被用于 20 次调参和参数选择，独立确认资格已撤回；阻断针对该集合提供独立确认的主张。 |", "conformance": "passed"},
+      "comparison": "均阻断已用于选择的这一集合之独立确认主张，未缩为普通风险，也未扩成全项目禁止。"
+    },
+    {
+      "id": "I-G5",
+      "item": "Gate 5 状态、主张和范围",
+      "status": "passed",
+      "source": {"path": "fixture.gate_reviews[R-G5]", "quote": "证据不足；复杂方法可形成可靠核心贡献；论文主张草案v1"},
+      "off": {"line": 7, "quote": "**Gate 5：证据不足。** 论文主张草案 v1 中，复杂方法作为可靠核心贡献的依据仍依赖未解决的独立确认和复杂性必要性。", "conformance": "passed"},
+      "on": {"line": 11, "quote": "| 知识贡献（Gate 5） | 证据不足 | R-G5/E5 中复杂方法的可靠核心贡献仍依赖未解决的独立确认与复杂性必要性；判断限于论文主张草案 v1。 |", "conformance": "passed"},
+      "comparison": "均未批准可靠核心贡献主张，并保留草案 v1 范围及对未解决证据的依赖。"
+    },
+    {
+      "id": "I-RISK",
+      "item": "风险后果与 R-G4 有效阻断",
+      "status": "passed",
+      "source": {"path": "fixture.gate_reviews[R-G4].stop_condition", "quote": "没有新独立证据前，不推进该独立确认主张。"},
+      "off": {"lines": [6, 9], "quote": "没有新独立证据前，不推进“该集合提供独立确认”的主张。", "conformance": "passed"},
+      "on": {"lines": [20, 23, 27], "quote": "没有新独立证据前，不推进该独立确认主张；该集合仍可按开发证据如实记录。", "conformance": "passed"},
+      "comparison": "双方保留停止推进独立确认主张的实际后果，同时允许如实整理开发证据。没有平均状态或用其他 Gate 通过抵消阻断。"
+    },
+    {
+      "id": "I-FOCUS",
+      "item": "首要科学问题与待决焦点",
+      "status": "passed",
+      "source": {"path": "fixture.current_focus.scientific_question", "quote": "现有收益是否来自独立验证，还是调参选择造成的乐观偏差？"},
+      "off": {"line": 11, "quote": "现有收益是否来自独立验证，还是调参选择造成的乐观偏差？", "conformance": "passed"},
+      "on": {"line": 25, "quote": "现有收益是否来自独立验证，还是调参选择造成的乐观偏差？（来源：R-G4、快照 current_focus）", "conformance": "passed"},
+      "comparison": "焦点未变化，也未被创新性或假设核查等较易开展的工作替代。"
+    },
+    {
+      "id": "I-ACTION",
+      "item": "当前最小行动及其三个组成部分",
+      "status": "passed",
+      "source": {"path": "fixture.current_focus.minimal_next_action", "quote": "先保留20次调参记录，将已参与选择的数据如实标为开发证据，并列出下一次独立确认所需的未使用数据。"},
+      "off": {"line": 13, "quote": "保留 20 次调参记录，将已参与选择的数据如实标为开发证据，并列出下一次独立确认所需的未使用数据", "conformance": "passed"},
+      "on": {"line": 27, "quote": "先保留 20 次调参记录，将已参与选择的数据如实标为开发证据，并列出下一次独立确认所需的未使用数据", "conformance": "passed"},
+      "comparison": "保留历史、开发证据重标和未使用数据清单均保留。列出所需数据未被改成采集数据或运行确认实验。"
+    },
+    {
+      "id": "I-STOP",
+      "item": "其余 Gate 的原行动、停止条件和范围限制",
+      "status": "passed",
+      "source": {"path": "fixture.gate_reviews[R-G1,R-G2,R-G3,R-G5]", "quote": "本行动完成后停止，不自动扩大研究范围。"},
+      "off": {"lines": [3, 4, 5, 7, 9], "quote": "完成相应行动后停止，不自动扩大研究范围。", "conformance": "passed"},
+      "on": {"lines": [17, 18, 19, 21], "quote": "本行动完成后停止，不自动扩大研究范围。", "conformance": "passed"},
+      "comparison": "off 将通用停止条件集中说明，on 逐 Gate 展开。两者都保留同批任务去复杂化对照、一个最影响排序假设核查、先处理 R-G4 再缩小主张等原建议，且均未将建议转为执行许可。"
+    },
+    {
+      "id": "I-PENDING",
+      "item": "未解决事项保持待决",
+      "status": "passed",
+      "source": {"path": "fixture.gate_reviews[R-G2,R-G3,R-G4,R-G5].evidence", "quote": "贡献草案仍依赖未解决的独立确认与复杂性必要性。"},
+      "off": {"lines": [4, 5, 6, 7], "quote": "复杂方法作为可靠核心贡献的依据仍依赖未解决的独立确认和复杂性必要性。", "conformance": "passed"},
+      "on": {"lines": [8, 9, 10, 11], "quote": "复杂方法的可靠核心贡献仍依赖未解决的独立确认与复杂性必要性", "conformance": "passed"},
+      "comparison": "复杂组件必要性、现实适用性、独立确认及可靠贡献仍未解决；双方未给出新的解决结论或代替研究者作出路线决定。"
+    },
+    {
+      "id": "I-AUTH",
+      "item": "授权与研究者决定",
+      "status": "passed",
+      "source": {"path": "fixture.current_focus.authorization", "quote": "仅展示与记录整理；未授权运行新确认实验。"},
+      "off": {"line": 9, "quote": "本轮仅获授权展示与整理记录，未增加执行授权，尤其未授权运行新确认实验。", "conformance": "passed"},
+      "on": {"line": 23, "quote": "当前仅授权展示与记录整理；上述对照、假设核查等仍是原记录的行动建议，展示不增加执行授权。未授权运行新确认实验。", "conformance": "passed"},
+      "comparison": "研究者授权保持为展示与整理。没有新增批准、资源许可、科研运行或 Gate 放行。"
+    },
+    {
+      "id": "I-PROVENANCE",
+      "item": "虚构快照、项目版本和核验边界",
+      "status": "passed",
+      "source": {"path": "fixture.fixture_notice, fixture.project_version", "quote": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。"},
+      "off": {"line": 1, "quote": "以下仅转述当前海上搜索研究 v1 的虚构已有审查快照，不代表真实科研核验", "conformance": "passed"},
+      "on": {"line": 3, "quote": "项目版本 v1；展示范围：当前海上搜索研究 v1 的现有审查范围。以下仅转述所附虚构审查记录，不代表真实科研核验", "conformance": "passed"},
+      "comparison": "均限于虚构 v1 快照，引用相应 review/evidence；没有声称开展过真实科研核验。"
+    }
+  ],
+  "deviations": [],
+  "non_decision_differences": [
+    "on 把五维内容放进 Markdown 表格，并逐 Gate 展开原行动及停止条件；off 以列表说明行动，在第 9 行集中表达通用停止条件。",
+    "on 在首要问题和行动处显式写出 current_focus；off 用相同问题及标注 R-G4 来源的最小行动表达同一焦点。",
+    "on 第 20 行补充该集合仍可作为开发证据如实记录，属于 fixture 中改记为开发证据这一原行动的展开，未解除独立确认阻断。"
+  ],
+  "limitations": [
+    "已按要求记录显式加载；不能据此证明自然选择或自动触发 Skill 的能力。",
+    "只有一组 D11 回答，未验证跨模型、多轮稳定性或统计成功率。",
+    "未导出两执行者完整工具轨迹。联网、科研运行、源记录未修改及全新会话隔离仅有转交摘要或正文自报，未作独立行为审计。",
+    "本报告评估展示与决策语义，不验证虚构 fixture 对真实海上搜索研究是否成立。",
+    "未检查 D01 至 D10；这些用例留待后续单独任务。"
+  ]
+}

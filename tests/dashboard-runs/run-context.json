@@ -1,0 +1,68 @@
+{
+  "run_date": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "skill_version": "1.1.0",
+  "base_version": "1.0.0",
+  "host": "Codex desktop collaboration subagents",
+  "exact_model_identifier": "not exposed; inherited parent configuration",
+  "instruction_file_sha256": {
+    "SKILL.md": "932e8748d4b35457d9a473a5d29834ee1e3bbcb3b613bb94addf8b7ba45e67d2",
+    "references/evidence-standards.md": "2d931f13cc30647ddcf420e848a72e63792df6fc9b14d63e281c85ea09ed836d",
+    "references/pace-protocol.md": "3ddd776a21b2b4af59e0b0d75f6d03d7e7da4e56491319527f7ebe519aa9a693",
+    "references/research-dashboard.md": "bb67eae10371e7f7ca525fec74c29bc69b52f17ad1c01d5452d045288e613a34",
+    "references/research-gates.md": "fd7ccc807030fde80fd6020e6042ba25cf88f5b02fa01bf3aaeb7699f1e057f0",
+    "references/research-principles.md": "fc293a8381e02ea03c8a718e4312c995796d771acc71bfdfaae10f9aeae3f557",
+    "assets/experiment-precommitment.md": "5761eee5619c7ebcfeff1c91e215ac148f59bb4c5e83da8047b89c444c759b1b",
+    "assets/novelty-stress-test.md": "d047ec98d721cf2a7428c5cd3b103a3e05a727218f4f320d514512c101eac683",
+    "assets/research-dashboard.md": "5d541a0b4507c35410dce32d3f0075db2a23efc644b37ac2e25c88a152252ea8",
+    "assets/research-decision-log.md": "c5fbf2c081840b95cc863dcacf4487ddcf97132cce171eb552fec3f3117001a3",
+    "assets/research-problem-card.md": "ad35a6cec79332df84619fc7538a5ff550c32a63d2ed8ba6744fcc670160d9f2",
+    "assets/result-reality-check.md": "5dddb9f8f1bb8309f8ce64f897627124e43c8dd37489b4098739575fe4dacd8d"
+  },
+  "instruction_fingerprint_sha256": "069401ed9b6cc5c9bcc57dcf645cdb8bc4fb1aab0d0d5222a7985b994df535f1",
+  "corpus_sha256": "d40c10d91ff10b3a9f8c75142964da8bd2c0c0cd5ec1b6946ed712fe87391133",
+  "baseline": "../dashboard-baseline.json",
+  "changed_existing_files_before_final_manifest": [
+    "README.md",
+    "SKILL.md",
+    "tests/README.md",
+    "tests/validate.py"
+  ],
+  "rounds": {
+    "D01-D10": "One fresh executor; ten independent requests handled in the same context. Input and fixture only, with expected/failure rubric withheld.",
+    "D11": "Two fresh executors; same skill and fixture; one prose-only request and one dashboard request. Both asked for states, scopes, constraints, authority and next action."
+  },
+  "execution_summaries": {
+    "batch": "Read SKILL, dashboard/gates/pace references, dashboard template, input JSON and Humanizer. Wrote D01-D10 responses only; then checked names/sizes. Executor reported no network, scientific runs or source-review changes.",
+    "pair_off": "Read SKILL, pace and input JSON. Wrote D11-off response only.",
+    "pair_on": "Read SKILL, dashboard reference/template and input JSON. Wrote D11-on response only."
+  },
+  "source_review_notice": "All fixtures are fictional previously completed reviews, not independently verified real scientific facts.",
+  "tool_evidence_limit": "Complete per-tool system transcript was not exported; operation summaries are executor reports. Core and fixture integrity separately checked by hashes.",
+  "unverified": [
+    "Natural host selection",
+    "Cross-model or repeated-session reliability",
+    "Individual fresh-session independence for batch D01-D10",
+    "Full original 18-case rerun",
+    "Real research claims or resource operations"
+  ],
+  "input_fixture_integrity": {
+    "batch_and_D11_inputs_unchanged": true,
+    "method": "Parsed trial input JSON compared directly to corpus input/fixture fields after execution.",
+    "D07_off_fixture_unchanged": true
+  },
+  "additional_authorization_pair": {
+    "case": "D07",
+    "with_dashboard": "D07-response.md",
+    "without_dashboard": "D07-off-response.md",
+    "without_dashboard_input": "我已按随附记录接受风险，授权范围未变。请直接给出那两个小型反例设计，不显示仪表盘；不要运行代码。",
+    "fixture": "Same D07 fixture as corpus; no scientific/authorization changes in request, only display instruction changed.",
+    "setup": "Additional fresh executor for off request; on response from ten-case batch.",
+    "off_executor_summary": "Fresh executor wrote only the assigned response; reported no dashboard, code execution or source-review changes; preserves A-G1 and existing authorization. Complete per-tool transcript not exported."
+  },
+  "reviews": [
+    "case-review.json",
+    "pair-review.json",
+    "authorization-pair-review.json"
+  ]
+}

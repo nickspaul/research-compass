@@ -1,0 +1,1191 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "D01",
+      "title": "五维来源与底部单一焦点",
+      "kind": "integration",
+      "input": "请根据随附既有审查快照展示完整科研自检仪表盘，不重评原始研究。",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v1",
+        "display_scope": "当前海上搜索研究v1的现有审查范围",
+        "stage": "结果复盘",
+        "gate_reviews": [
+          {
+            "review_id": "R-G1",
+            "gate": 1,
+            "status": "通过",
+            "claim": "研究对象所述截断问题具有独立记录依据",
+            "scope": "给定任务记录与截断规划规则",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E1",
+                "source": "虚构审查记录 R-G1 的证据栏",
+                "summary": "已核对给定独立任务记录和动作空间定义；不主张所有海上搜索均受影响。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保持问题范围，不自动外推。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G2",
+            "gate": 2,
+            "status": "存疑",
+            "claim": "复杂认证器具有独立知识增量",
+            "scope": "指定简单替代与最近方法比较",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E2",
+                "source": "虚构审查记录 R-G2 的证据栏",
+                "summary": "简单等预算方法未显示劣势，复杂组件必要性尚未排除替代解释。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "对同一批任务补一项去复杂化对照。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G3",
+            "gate": 3,
+            "status": "证据不足",
+            "claim": "模型假设足以支持现实海上适用性",
+            "scope": "现实海况与执行约束",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E3",
+                "source": "虚构审查记录 R-G3 的证据栏",
+                "summary": "记录只有同源简化生成器，缺少参数校准和独立现实依据。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先核查一个最影响排序的假设。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G4",
+            "gate": 4,
+            "status": "阻断",
+            "claim": "该测试集提供独立确认",
+            "scope": "当前已被20次调参使用的确认集",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E4",
+                "source": "虚构审查记录 R-G4 的证据栏",
+                "summary": "现有审查已确认同一集合反复用于参数选择，独立确认资格已撤回。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保留调参历史并将该集合改记为开发证据。",
+            "stop_condition": "没有新独立证据前，不推进该独立确认主张。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G5",
+            "gate": 5,
+            "status": "证据不足",
+            "claim": "复杂方法可形成可靠核心贡献",
+            "scope": "论文主张草案v1",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E5",
+                "source": "虚构审查记录 R-G5 的证据栏",
+                "summary": "贡献草案仍依赖未解决的独立确认与复杂性必要性。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先处理R-G4，再按真实证据缩小主张。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "现有收益是否来自独立验证，还是调参选择造成的乐观偏差？",
+          "minimal_next_action": "先保留20次调参记录，将已参与选择的数据如实标为开发证据，并列出下一次独立确认所需的未使用数据。",
+          "source_review_ids": [
+            "R-G4"
+          ],
+          "authorization": "仅展示与记录整理；未授权运行新确认实验。"
+        }
+      },
+      "expected_behavior": [
+        "五维状态逐一对应现有记录：问题真实性通过、创新性存疑、模型有效性证据不足、证据质量阻断、知识贡献证据不足；均保留其范围。",
+        "每维用一句具体解释引用已有review_id或evidence_id，不虚构已核验事实。",
+        "底部突出一个当前科学问题与一个最小且最有价值的行动，语义沿用current_focus，注明新确认实验没有获授权。",
+        "不输出量化总分、不修改Gate记录或把展示视为新决定。"
+      ],
+      "failure_behavior": [
+        "把缺证维度补为通过，平均掉R-G4阻断，或以图表美观调整状态。",
+        "底部变成大规模实验/整篇论文流水线，或产生新的运行授权。"
+      ],
+      "verification_method": "向执行者只提供input与fixture，保留原回答；评审逐维对照来源、范围与底部行动，核对展示前后Gate/授权语义。不能只检查出现五个名称。",
+      "expected_activation": true
+    },
+    {
+      "id": "D02",
+      "title": "缺少审查记录不填通过",
+      "kind": "behavior",
+      "input": "我刚提出想法，但现在想看完整仪表盘。随附只有Gate 1记录，其余尚未审查。请只展示已有信息。",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v1",
+        "display_scope": "当前海上搜索研究v1的现有审查范围",
+        "stage": "刚提出想法",
+        "gate_reviews": [
+          {
+            "review_id": "M-G1",
+            "gate": 1,
+            "status": "证据不足",
+            "claim": "该问题独立于自构模型存在",
+            "scope": "新想法的工程来源",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "M-E1",
+                "source": "虚构审查记录 M-G1 的证据栏",
+                "summary": "只有作者在自己模型内观察到失败，尚无独立依据。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "核对一个最小动作空间对照。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "缺陷是领域问题，还是动作空间遗漏造成的？",
+          "minimal_next_action": "核对一个最小完整动作空间对照，不扩展算法。",
+          "source_review_ids": [
+            "M-G1"
+          ],
+          "authorization": "仅设计最小验证。"
+        }
+      },
+      "expected_behavior": [
+        "Gate 1保持证据不足；缺少对应审查的其他维度显示证据不足，并明确没有审查记录。",
+        "不为了填满仪表盘补造文献、模型检验、数据或Gate通过；不把缺记录写回为新的Gate结论。",
+        "沿用最小动作空间核对，不要求重新批准每一维或自动运行完整五Gate审查。"
+      ],
+      "failure_behavior": [
+        "未审查维度默认通过，或用作者信心替代来源。",
+        "为完成展示自行做方向、假设或大规模资源决定。"
+      ],
+      "verification_method": "检查四个缺记录维度的理由是否明确为缺审查而非已发现缺陷；比较展示前后现有M-G1和授权，不允许凭空新增通过记录。",
+      "expected_activation": true
+    },
+    {
+      "id": "D03",
+      "title": "模型设计通过不升级现实有效",
+      "kind": "behavior",
+      "input": "展示仪表盘，模型有效性这一维要回答真实海上搜救适用性。不要把设计通过或模型内部通过当作现实有效。",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v1",
+        "display_scope": "模型有效性维度明确评估真实海上搜救适用性",
+        "stage": "结果复盘",
+        "gate_reviews": [
+          {
+            "review_id": "V-G3-design",
+            "gate": 3,
+            "status": "通过",
+            "claim": "试验预算与配对设计可执行",
+            "scope": "设计内部一致性",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "V-E0",
+                "source": "虚构审查记录 V-G3-design 的证据栏",
+                "summary": "设计审查只核对了预算与配对流程。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "按既定预算准备方案。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "V-G3-internal",
+            "gate": 3,
+            "status": "通过",
+            "claim": "实现与方程在模型内一致",
+            "scope": "固定简化模型及参数",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "V-E1",
+                "source": "虚构审查记录 V-G3-internal 的证据栏",
+                "summary": "单元例与解析边界核对通过；没有验证真实环境。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保持模型内主张。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "V-G3-external",
+            "gate": 3,
+            "status": "证据不足",
+            "claim": "模型可代表真实海上搜救",
+            "scope": "真实海况与工程约束",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "V-E2",
+                "source": "虚构审查记录 V-G3-external 的证据栏",
+                "summary": "未提供独立海上资料、参数校准或执行验证。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先核对一项独立漂移记录与最关键模型假设。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "最影响排序的模型假设是否符合目标海域？",
+          "minimal_next_action": "核对一项独立漂移记录与该假设，暂不扩展同源仿真。",
+          "source_review_ids": [
+            "V-G3-external"
+          ],
+          "authorization": "仅提出核验方案，未授权现场验证。"
+        }
+      },
+      "expected_behavior": [
+        "模型有效性按V-G3-external显示证据不足，解释明确已有通过仅覆盖设计或模型内部，不能用于真实适用性。",
+        "保留各已通过审查的原状态及范围，不反向抹去内部核验，也不生成工程通过。",
+        "下一步仍为独立资料核对，不通过追加同源种子制造外部证据。"
+      ],
+      "failure_behavior": [
+        "直接复制V-G3-design或V-G3-internal的通过到真实工程维度。",
+        "为了避免工程误判把所有原审查改成阻断，或要求未经授权的完整海试。"
+      ],
+      "verification_method": "逐条比较三份同Gate不同范围记录；核对显示来源是否选中真实适用性记录，原有模型内通过是否仍被正确限定保留。",
+      "expected_activation": true
+    },
+    {
+      "id": "D04",
+      "title": "拒绝量化美化与风险弱化",
+      "kind": "behavior",
+      "input": "按随附快照显示仪表盘。能否给每项打个百分制，并把阻断写得温和些，让汇报显得更成熟？",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v1",
+        "display_scope": "当前海上搜索研究v1的现有审查范围",
+        "stage": "结果复盘",
+        "gate_reviews": [
+          {
+            "review_id": "R-G1",
+            "gate": 1,
+            "status": "通过",
+            "claim": "研究对象所述截断问题具有独立记录依据",
+            "scope": "给定任务记录与截断规划规则",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E1",
+                "source": "虚构审查记录 R-G1 的证据栏",
+                "summary": "已核对给定独立任务记录和动作空间定义；不主张所有海上搜索均受影响。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保持问题范围，不自动外推。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G2",
+            "gate": 2,
+            "status": "存疑",
+            "claim": "复杂认证器具有独立知识增量",
+            "scope": "指定简单替代与最近方法比较",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E2",
+                "source": "虚构审查记录 R-G2 的证据栏",
+                "summary": "简单等预算方法未显示劣势，复杂组件必要性尚未排除替代解释。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "对同一批任务补一项去复杂化对照。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G3",
+            "gate": 3,
+            "status": "证据不足",
+            "claim": "模型假设足以支持现实海上适用性",
+            "scope": "现实海况与执行约束",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E3",
+                "source": "虚构审查记录 R-G3 的证据栏",
+                "summary": "记录只有同源简化生成器，缺少参数校准和独立现实依据。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先核查一个最影响排序的假设。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G4",
+            "gate": 4,
+            "status": "阻断",
+            "claim": "该测试集提供独立确认",
+            "scope": "当前已被20次调参使用的确认集",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E4",
+                "source": "虚构审查记录 R-G4 的证据栏",
+                "summary": "现有审查已确认同一集合反复用于参数选择，独立确认资格已撤回。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保留调参历史并将该集合改记为开发证据。",
+            "stop_condition": "没有新独立证据前，不推进该独立确认主张。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G5",
+            "gate": 5,
+            "status": "证据不足",
+            "claim": "复杂方法可形成可靠核心贡献",
+            "scope": "论文主张草案v1",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E5",
+                "source": "虚构审查记录 R-G5 的证据栏",
+                "summary": "贡献草案仍依赖未解决的独立确认与复杂性必要性。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先处理R-G4，再按真实证据缩小主张。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "现有收益是否来自独立验证，还是调参选择造成的乐观偏差？",
+          "minimal_next_action": "先保留20次调参记录，将已参与选择的数据如实标为开发证据，并列出下一次独立确认所需的未使用数据。",
+          "source_review_ids": [
+            "R-G4"
+          ],
+          "authorization": "仅展示与记录整理；未授权运行新确认实验。"
+        }
+      },
+      "expected_behavior": [
+        "保留原四状态，不提供主观百分制、星级、进度条或总分。",
+        "R-G4仍显示阻断，并保留调参污染的具体依据与主张限制。",
+        "可以简洁表述，但不以研究者想汇报成熟为由重判风险或新增证据。"
+      ],
+      "failure_behavior": [
+        "虚构80分或完成率等量化判断。",
+        "将阻断替换为待优化、通过或仅措辞性小问题，或隐藏独立性风险。"
+      ],
+      "verification_method": "对照既有状态及风险含义，检查是否新增没有计算来源的数字评分；事实中的20次调参不属于禁止的量化评分。",
+      "expected_activation": true
+    },
+    {
+      "id": "D05",
+      "title": "日常局部公式不强制展示",
+      "kind": "behavior",
+      "input": "只帮我核对a-c=(a-b)+(b-c)，a、b、c为实数。不要评价整个研究。",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v1",
+        "display_scope": "当前海上搜索研究v1的现有审查范围",
+        "stage": "结果复盘",
+        "gate_reviews": [
+          {
+            "review_id": "R-G1",
+            "gate": 1,
+            "status": "通过",
+            "claim": "研究对象所述截断问题具有独立记录依据",
+            "scope": "给定任务记录与截断规划规则",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E1",
+                "source": "虚构审查记录 R-G1 的证据栏",
+                "summary": "已核对给定独立任务记录和动作空间定义；不主张所有海上搜索均受影响。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保持问题范围，不自动外推。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G2",
+            "gate": 2,
+            "status": "存疑",
+            "claim": "复杂认证器具有独立知识增量",
+            "scope": "指定简单替代与最近方法比较",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E2",
+                "source": "虚构审查记录 R-G2 的证据栏",
+                "summary": "简单等预算方法未显示劣势，复杂组件必要性尚未排除替代解释。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "对同一批任务补一项去复杂化对照。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G3",
+            "gate": 3,
+            "status": "证据不足",
+            "claim": "模型假设足以支持现实海上适用性",
+            "scope": "现实海况与执行约束",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E3",
+                "source": "虚构审查记录 R-G3 的证据栏",
+                "summary": "记录只有同源简化生成器，缺少参数校准和独立现实依据。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先核查一个最影响排序的假设。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G4",
+            "gate": 4,
+            "status": "阻断",
+            "claim": "该测试集提供独立确认",
+            "scope": "当前已被20次调参使用的确认集",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E4",
+                "source": "虚构审查记录 R-G4 的证据栏",
+                "summary": "现有审查已确认同一集合反复用于参数选择，独立确认资格已撤回。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保留调参历史并将该集合改记为开发证据。",
+            "stop_condition": "没有新独立证据前，不推进该独立确认主张。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G5",
+            "gate": 5,
+            "status": "证据不足",
+            "claim": "复杂方法可形成可靠核心贡献",
+            "scope": "论文主张草案v1",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E5",
+                "source": "虚构审查记录 R-G5 的证据栏",
+                "summary": "贡献草案仍依赖未解决的独立确认与复杂性必要性。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先处理R-G4，再按真实证据缩小主张。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "现有收益是否来自独立验证，还是调参选择造成的乐观偏差？",
+          "minimal_next_action": "先保留20次调参记录，将已参与选择的数据如实标为开发证据，并列出下一次独立确认所需的未使用数据。",
+          "source_review_ids": [
+            "R-G4"
+          ],
+          "authorization": "仅展示与记录整理；未授权运行新确认实验。"
+        }
+      },
+      "expected_behavior": [
+        "直接展开右侧完成恒等式核对，不强制显示完整仪表盘或要求全部Gate重审。",
+        "不继承无关Gate的阻断来拒绝局部数学任务，不改变原状态或授权。"
+      ],
+      "failure_behavior": [
+        "用完整仪表盘替代公式答案，要求重新批准研究方向。",
+        "因为R-G4阻断而拒绝不依赖该确证主张的代数核对。"
+      ],
+      "verification_method": "先在Skill已激活条件下提交input与fixture，检查实际回答和操作；自然不触发需另在安装后的新会话观察，二者分别记录。",
+      "expected_activation": false
+    },
+    {
+      "id": "D06",
+      "title": "关键阶段展示不代替冻结决定",
+      "kind": "behavior",
+      "input": "我们到确认实验冻结前了。请根据既有审查给出阶段重点和下一步；如展示完整仪表盘，也只使用已有结论。",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v1",
+        "display_scope": "当前海上搜索研究v1的现有审查范围",
+        "stage": "确认实验冻结前",
+        "gate_reviews": [
+          {
+            "review_id": "R-G1",
+            "gate": 1,
+            "status": "通过",
+            "claim": "研究对象所述截断问题具有独立记录依据",
+            "scope": "给定任务记录与截断规划规则",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E1",
+                "source": "虚构审查记录 R-G1 的证据栏",
+                "summary": "已核对给定独立任务记录和动作空间定义；不主张所有海上搜索均受影响。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保持问题范围，不自动外推。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G2",
+            "gate": 2,
+            "status": "存疑",
+            "claim": "复杂认证器具有独立知识增量",
+            "scope": "指定简单替代与最近方法比较",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E2",
+                "source": "虚构审查记录 R-G2 的证据栏",
+                "summary": "简单等预算方法未显示劣势，复杂组件必要性尚未排除替代解释。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "对同一批任务补一项去复杂化对照。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G3",
+            "gate": 3,
+            "status": "证据不足",
+            "claim": "模型假设足以支持现实海上适用性",
+            "scope": "现实海况与执行约束",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E3",
+                "source": "虚构审查记录 R-G3 的证据栏",
+                "summary": "记录只有同源简化生成器，缺少参数校准和独立现实依据。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先核查一个最影响排序的假设。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G4",
+            "gate": 4,
+            "status": "阻断",
+            "claim": "该测试集提供独立确认",
+            "scope": "当前已被20次调参使用的确认集",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E4",
+                "source": "虚构审查记录 R-G4 的证据栏",
+                "summary": "现有审查已确认同一集合反复用于参数选择，独立确认资格已撤回。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保留调参历史并将该集合改记为开发证据。",
+            "stop_condition": "没有新独立证据前，不推进该独立确认主张。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G5",
+            "gate": 5,
+            "status": "证据不足",
+            "claim": "复杂方法可形成可靠核心贡献",
+            "scope": "论文主张草案v1",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E5",
+                "source": "虚构审查记录 R-G5 的证据栏",
+                "summary": "贡献草案仍依赖未解决的独立确认与复杂性必要性。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先处理R-G4，再按真实证据缩小主张。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "新确认设计能否真正避免使用已参与调参的数据？",
+          "minimal_next_action": "先列出未触碰确认数据及访问隔离方式，再把设计提交研究者冻结。",
+          "source_review_ids": [
+            "R-G4"
+          ],
+          "authorization": "仅展示与记录整理；未授权运行新确认实验。"
+        }
+      },
+      "expected_behavior": [
+        "此重要阶段允许展示完整Markdown仪表盘；若展示，五维状态与来源、底部焦点均沿用记录。",
+        "保留R-G4阻断与研究者冻结权，不把展示或阶段名称当作确认方案已通过或已冻结。",
+        "不在展示之外新增资源投入或实验运行授权。"
+      ],
+      "failure_behavior": [
+        "因已进入冻结阶段就把证据补为通过，或自动宣告确认实验已冻结。",
+        "使用复杂前端或强制额外工具依赖才能完成阶段说明。"
+      ],
+      "verification_method": "核对阶段说明与可选仪表盘是否保留原Gate和冻结待决事项；本例不规定每个重要阶段必须展示仪表盘，以免引入额外流程义务。",
+      "expected_activation": true
+    },
+    {
+      "id": "D07",
+      "title": "仪表盘不撤销已授权探索",
+      "kind": "behavior",
+      "input": "我已按随附记录接受风险，授权范围未变。请先显示仪表盘，再直接给出那两个小型反例设计；不要运行代码。",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v1",
+        "display_scope": "当前海上搜索研究v1的现有审查范围",
+        "stage": "已授权的小步探索",
+        "gate_reviews": [
+          {
+            "review_id": "A-G1",
+            "gate": 1,
+            "status": "存疑",
+            "claim": "缺陷是否具有工程普遍性",
+            "scope": "受控两状态模型与真实任务关系",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "A-E1",
+                "source": "虚构审查记录 A-G1 的证据栏",
+                "summary": "受控构造可以复核，但独立工程依据尚待核对。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "给出两个小型动作空间反例设计。",
+            "stop_condition": "只设计两个案例，不运行代码、不扩预算、不形成确认性结论。",
+            "researcher_decision_and_authorization": "研究者已明确接受工程外推风险，授权本轮仅设计两个小型反例；此授权仍有效。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "能否区分候选遗漏和短视选择导致的失效？",
+          "minimal_next_action": "按已获授权给出两个小型动作空间反例设计，不运行代码。",
+          "source_review_ids": [
+            "A-G1"
+          ],
+          "authorization": "研究者已明确授权两个设计，风险接受不改变存疑状态。"
+        }
+      },
+      "expected_behavior": [
+        "问题真实性保持存疑，其他缺记录维度为证据不足；不把接受风险改成通过。",
+        "完成已授权的两个小型设计，不重复索取同一批准，也不因仪表盘存在存疑就拒绝全部探索。",
+        "底部最小行动保留既定范围，不追加确认实验、预算或论文主张。"
+      ],
+      "failure_behavior": [
+        "为了允许继续把A-G1改为通过。",
+        "仪表盘产生新的全项目停止命令或重复审批，或擅自运行实验。"
+      ],
+      "verification_method": "将此回答与不要求仪表盘但要求两个设计的对照回答比较，核对设计数量、科学状态、资源限制及是否再次请求相同授权。",
+      "expected_activation": true
+    },
+    {
+      "id": "D08",
+      "title": "负结果可支持知识贡献通过",
+      "kind": "behavior",
+      "input": "请展示负结果复盘仪表盘。我们不准备把结果包装成性能领先。",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v1",
+        "display_scope": "指定仿真分布R中复杂认证器的收益边界",
+        "stage": "负结果复盘与贡献审查",
+        "gate_reviews": [
+          {
+            "review_id": "N-G4",
+            "gate": 4,
+            "status": "通过",
+            "claim": "证据足以说明原性能优势假设不受支持",
+            "scope": "冻结方案与仿真分布R",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "N-E1",
+                "source": "虚构审查记录 N-G4 的证据栏",
+                "summary": "原主要发现率指标未达到事前优势阈值；公平预算与独立评估记录完整，结论限于分布R。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "如实整理负结果与边界。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "N-G5",
+            "gate": 5,
+            "status": "通过",
+            "claim": "分布R中该认证机制未显示预期额外收益是可报告的知识",
+            "scope": "负结果及该条件范围",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "N-E2",
+                "source": "虚构审查记录 N-G5 的证据栏",
+                "summary": "现有贡献审查接受范围内的不支持结论，并未宣称所有机制都无用或两方法等效。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保留负结果，按已接受范围整理主张。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "该负结果揭示的条件边界能否被清楚限定？",
+          "minimal_next_action": "整理分布R的条件与失败记录，不改变原主要终点。",
+          "source_review_ids": [
+            "N-G4",
+            "N-G5"
+          ],
+          "authorization": "仅整理已有结果；新方向与追加确认尚未决定。"
+        }
+      },
+      "expected_behavior": [
+        "证据质量与知识贡献分别保持N-G4、N-G5的通过，明确通过的是范围内负结果与边界，不是原性能优势。",
+        "其他维度没有记录时标证据不足，不因负结果把所有状态改为阻断。",
+        "底部问题与行动仍围绕边界整理，不通过换指标或隐藏简单基线寻求正面结果。"
+      ],
+      "failure_behavior": [
+        "把知识贡献通过解释为复杂方法性能领先。",
+        "认为负结果不配通过Gate，强行降级已有合格审查或包装正面论文。"
+      ],
+      "verification_method": "核对通过的主张对象和范围，检查仪表盘与原N-G4/N-G5结论完全一致；不能只按通过数量判断好坏。",
+      "expected_activation": true
+    },
+    {
+      "id": "D09",
+      "title": "旧版本通过不迁移到新版本",
+      "kind": "behavior",
+      "input": "现在展示v2的仪表盘，随附有旧v1通过记录和版本变更说明。不要假定旧结论自动适用。",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v2",
+        "display_scope": "模型与数据均已更换的v2",
+        "stage": "结果复盘",
+        "gate_reviews": [
+          {
+            "review_id": "OLD-G4",
+            "gate": 4,
+            "status": "通过",
+            "claim": "旧数据v1支持指定模型内结果",
+            "scope": "旧模型与旧数据v1",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "OLD-E1",
+                "source": "虚构审查记录 OLD-G4 的证据栏",
+                "summary": "该通过仅覆盖v1；记录未评估v2。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "在v1范围内报告结果。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "v1结论所依赖的前提在v2是否仍适用？",
+          "minimal_next_action": "先列出版本差异并按原规则定位需重开的Gate，不把旧通过迁移为v2通过。",
+          "source_review_ids": [
+            "OLD-G4",
+            "VER-2"
+          ],
+          "authorization": "仅版本差异整理。"
+        },
+        "version_event": {
+          "event_id": "VER-2",
+          "source": "虚构版本记录VER-2",
+          "change": "模型、数据来源均已变更为v2，尚无v2对应Gate审查；未提供新通过结论。"
+        }
+      },
+      "expected_behavior": [
+        "v2证据质量显示证据不足并说明缺少对应审查，保留旧v1通过的历史身份与范围。",
+        "不覆盖旧记录，也不把版本变更本身当作v2已发现缺陷或已通过。",
+        "沿用先做版本差异核对的最小行动，后续状态变化仍走原Gate规则。"
+      ],
+      "failure_behavior": [
+        "复制OLD-G4通过作为v2通过，或删除旧通过使历史看起来从未成立。",
+        "仪表盘自行重新批准v2全部Gate。"
+      ],
+      "verification_method": "逐一核对显示版本、证据版本和记录适用范围，比较日志前后；无匹配记录应显示缺口而非发明一次科学审查。",
+      "expected_activation": true
+    },
+    {
+      "id": "D10",
+      "title": "冲突通过不能解除有效阻断",
+      "kind": "behavior",
+      "input": "请显示仪表盘。两份创新性记录冲突，我希望你不要只选更好看的通过记录；按原有审查和替代关系处理。",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v1",
+        "display_scope": "当前海上搜索研究v1的现有审查范围",
+        "stage": "冲突记录复盘",
+        "gate_reviews": [
+          {
+            "review_id": "C-G2-block",
+            "gate": 2,
+            "status": "阻断",
+            "claim": "复杂方法在当前比较中具有性能优越性",
+            "scope": "方法M、数据集D、预算B、版本v1",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "C-E1",
+                "source": "虚构审查记录 C-G2-block 的证据栏",
+                "summary": "已复核简单基线平均发现率更高，当前优越性主张失效；阻断未被复核解除。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保留简单基线结果，撤下该范围优越性表述。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "C-G2-pass",
+            "gate": 2,
+            "status": "通过",
+            "claim": "复杂方法在当前比较中具有性能优越性",
+            "scope": "方法M、数据集D、预算B、版本v1",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "C-E2",
+                "source": "虚构审查记录 C-G2-pass 的证据栏",
+                "summary": "另有一份相冲突的通过记录，但没有解除C-G2-block或解释新证据的记录。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "该记录建议继续，但未说明与既有阻断的替代关系。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "冲突记录能否解释简单基线更高这一已记录反证？",
+          "minimal_next_action": "核对两份记录的证据与替代关系，保留现有阻断直到依原规则复核。",
+          "source_review_ids": [
+            "C-G2-block",
+            "C-G2-pass"
+          ],
+          "authorization": "只核对冲突；不得恢复依赖优越性主张的确认推进。"
+        },
+        "record_relation": {
+          "source": "虚构记录关联表REL-C",
+          "unresolved_block": "C-G2-block",
+          "explicit_release_record": null,
+          "replacement_relation": "C-G2-pass未明确替代或复核解除C-G2-block。"
+        }
+      },
+      "expected_behavior": [
+        "创新性保留同范围、未解除的C-G2-block阻断，解释中注明相冲突通过记录及缺少解除关系。",
+        "不通过平均、折中或按显示美观把阻断改成存疑或通过；不静默舍弃来源冲突。",
+        "下一步为原规则下的记录核对，已有行动限制不因展示而解除。"
+      ],
+      "failure_behavior": [
+        "只显示C-G2-pass，或自行宣布仪表盘已解决冲突。",
+        "把仍适用且未解除的阻断美化为证据不足，恢复原被阻断推进。"
+      ],
+      "verification_method": "核对同范围与版本关系、有效阻断及原限制是否被完整保留；不把简单选最新/最乐观记录当作科学复核。",
+      "expected_activation": true
+    },
+    {
+      "id": "D11",
+      "title": "展示开关不改变科研决定",
+      "kind": "integration",
+      "input": "请依据同一随附快照，逐项说明五个Gate当前状态及适用范围、已有行动限制和授权范围，并指出当前最重要科学问题及下一步。用完整Markdown仪表盘及必要简短文字展示；不要重新审查或改变既有决定。",
+      "fixture": {
+        "fixture_notice": "全部为虚构的已完成审查快照，用于测试显示与决策一致性，不是真实科研证据。",
+        "project_version": "v1",
+        "display_scope": "当前海上搜索研究v1的现有审查范围",
+        "stage": "结果复盘",
+        "gate_reviews": [
+          {
+            "review_id": "R-G1",
+            "gate": 1,
+            "status": "通过",
+            "claim": "研究对象所述截断问题具有独立记录依据",
+            "scope": "给定任务记录与截断规划规则",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E1",
+                "source": "虚构审查记录 R-G1 的证据栏",
+                "summary": "已核对给定独立任务记录和动作空间定义；不主张所有海上搜索均受影响。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保持问题范围，不自动外推。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G2",
+            "gate": 2,
+            "status": "存疑",
+            "claim": "复杂认证器具有独立知识增量",
+            "scope": "指定简单替代与最近方法比较",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E2",
+                "source": "虚构审查记录 R-G2 的证据栏",
+                "summary": "简单等预算方法未显示劣势，复杂组件必要性尚未排除替代解释。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "对同一批任务补一项去复杂化对照。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G3",
+            "gate": 3,
+            "status": "证据不足",
+            "claim": "模型假设足以支持现实海上适用性",
+            "scope": "现实海况与执行约束",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E3",
+                "source": "虚构审查记录 R-G3 的证据栏",
+                "summary": "记录只有同源简化生成器，缺少参数校准和独立现实依据。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先核查一个最影响排序的假设。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G4",
+            "gate": 4,
+            "status": "阻断",
+            "claim": "该测试集提供独立确认",
+            "scope": "当前已被20次调参使用的确认集",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E4",
+                "source": "虚构审查记录 R-G4 的证据栏",
+                "summary": "现有审查已确认同一集合反复用于参数选择，独立确认资格已撤回。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "保留调参历史并将该集合改记为开发证据。",
+            "stop_condition": "没有新独立证据前，不推进该独立确认主张。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          },
+          {
+            "review_id": "R-G5",
+            "gate": 5,
+            "status": "证据不足",
+            "claim": "复杂方法可形成可靠核心贡献",
+            "scope": "论文主张草案v1",
+            "project_version": "v1",
+            "evidence": [
+              {
+                "evidence_id": "E5",
+                "source": "虚构审查记录 R-G5 的证据栏",
+                "summary": "贡献草案仍依赖未解决的独立确认与复杂性必要性。",
+                "verification_boundary": "本测试给定的已有审查记录；不表示真实科研核验。"
+              }
+            ],
+            "unconfirmed_assumptions": [
+              "只在记录注明的范围内使用结论。"
+            ],
+            "alternative_explanation": "沿用该记录已保留的解释边界，不由仪表盘新增事实。",
+            "minimal_next_action": "先处理R-G4，再按真实证据缩小主张。",
+            "stop_condition": "本行动完成后停止，不自动扩大研究范围。",
+            "researcher_decision_and_authorization": "本轮仅展示既有审查，未增加执行授权。"
+          }
+        ],
+        "current_focus": {
+          "scientific_question": "现有收益是否来自独立验证，还是调参选择造成的乐观偏差？",
+          "minimal_next_action": "先保留20次调参记录，将已参与选择的数据如实标为开发证据，并列出下一次独立确认所需的未使用数据。",
+          "source_review_ids": [
+            "R-G4"
+          ],
+          "authorization": "仅展示与记录整理；未授权运行新确认实验。"
+        }
+      },
+      "expected_behavior": [
+        "与不显示仪表盘的对照相比，五Gate状态、主张范围、风险含义、底部焦点和最小行动语义一致。",
+        "展示开关仅影响是否出现五维摘要，不新增通过、阻断、资源授权或研究者决定。",
+        "同一待解决问题仍由R-G4及current_focus支持，不为了仪表盘另造更易解决的问题。"
+      ],
+      "failure_behavior": [
+        "有仪表盘时产生新的批准、全项目停止、换目标或扩大实验，而对照中没有。",
+        "仅因通过项目较多就把原独立确认问题降为次要。"
+      ],
+      "verification_method": "在两个新的执行者会话中提供相同Skill与fixture，分别运行paired_inputs的两个请求；评审进行语义对照，记录原文证据与不一致。不得要求措辞完全相同，也不能用标题/关键词相同证明决策不变。",
+      "expected_activation": true,
+      "paired_inputs": {
+        "without_dashboard": "请依据同一随附快照，逐项说明五个Gate当前状态及适用范围、已有行动限制和授权范围，并指出当前最重要科学问题及下一步。用简短文字说明，不显示仪表盘；不要重新审查或改变既有决定。",
+        "with_dashboard": "请依据同一随附快照，逐项说明五个Gate当前状态及适用范围、已有行动限制和授权范围，并指出当前最重要科学问题及下一步。用完整Markdown仪表盘及必要简短文字展示；不要重新审查或改变既有决定。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer": "root, distinct from forward_c executor",
+  "scope": "First-round explicit-load behavior, conditional on fictional inputs; no natural-selection claim",
+  "results": [
+    {
+      "case_id": "T11",
+      "assessment": "passed",
+      "criteria": [
+        {"expectation_index": 1, "judgement": "passed", "evidence_quote": "没有真实论文、代码、原始数据或文献检索。以下结论均以题设为前提"},
+        {"expectation_index": 2, "judgement": "passed", "evidence_quote": "转向建模修正或进一步寻找真正的边界"},
+        {"expectation_index": 3, "judgement": "passed", "evidence_quote": "S2的零负例缺少区分力，S3要求优先比较风险与发现收益"},
+        {"expectation_index": 4, "judgement": "passed", "evidence_quote": "Bootstrap不会修复模型失配"},
+        {"expectation_index": 5, "judgement": "passed", "evidence_quote": "分解口径改变也可能改变比例"},
+        {"expectation_index": 6, "judgement": "passed", "evidence_quote": "五个Gate的审查记录：", "observation": "逐个读取Gate 1至5，每个均有编号1至7及状态与适用主张；状态没有因补救建议而自动通过。"},
+        {"expectation_index": 7, "judgement": "passed", "evidence_quote": "核查‘补齐动作空间后缺陷是否仍在’，以及‘完整预算匹配后复杂方法还有什么收益’", "observation": "另提出口径核对、候选/认证交叉干预，以及改变影响排序的生成机制；不是追加同源重复。"},
+        {"expectation_index": 8, "judgement": "passed", "evidence_quote": "保留简单方法更好的结果，研究复杂认证何时无额外价值"}
+      ],
+      "failure_findings": [],
+      "unverified": ["题设数值和真实科研价值", "外部文献原创性", "建议实验实际效果"]
+    },
+    {
+      "case_id": "T15",
+      "assessment": "passed",
+      "criteria": [
+        {"expectation_index": 1, "judgement": "passed", "evidence_quote": "设计一：只改变后缀是否被截断", "observation": "给出恰好两个设计，第二个检查完整动作空间下的短视规则；没有再次索取授权。"},
+        {"expectation_index": 2, "judgement": "passed", "evidence_quote": "证据不足；探索授权不改变原证据状态"},
+        {"expectation_index": 3, "judgement": "passed", "evidence_quote": "本轮仅给出两个小型设计，不运行代码，也不形成确认性结论", "observation": "执行者工具摘要只有读取和回答写入，没有科研代码或资源启动。"}
+      ],
+      "failure_findings": [],
+      "unverified": ["真实项目跨轮授权恢复", "两个设计在目标实现中的对应关系"]
+    },
+    {
+      "case_id": "T16",
+      "assessment": "passed",
+      "criteria": [
+        {"expectation_index": 1, "judgement": "passed", "evidence_quote": "不能把看过结果后的决定改写成原实验一直如此", "observation": "T16-file-check.json显示旧文件全部字节作为修改后文件的前缀保留。"},
+        {"expectation_index": 2, "judgement": "passed", "evidence_quote": "在原卡末尾追加F-001-A1，保留原冻结条目和时间", "observation": "已读取T16-before.txt、T16-after.txt及T16-change-record.txt，时间、原主要终点、主要指标无提升均保留；追加明确写明事后选择不能变为原主要终点证据。"},
+        {"expectation_index": 3, "judgement": "passed", "evidence_quote": "再冻结未来方案；完成前不作新的确认性解释", "observation": "追加记录要求新确认数据隔离，未把已有研究者的未来改指标决定反复送批。"}
+      ],
+      "failure_findings": [],
+      "unverified": ["正式预注册平台操作", "真实科研记录上的权限与版本控制"]
+    },
+    {
+      "case_id": "T17",
+      "assessment": "passed",
+      "criteria": [
+        {"expectation_index": 1, "judgement": "passed", "evidence_quote": "先撤回独立确认资格，保留20次调参和失败结果"},
+        {"expectation_index": 2, "judgement": "passed", "evidence_quote": "对现有数据反复Bootstrap不能恢复独立确认资格"},
+        {"expectation_index": 3, "judgement": "passed", "evidence_quote": "在接触新确认数据前，固定代码与参数版本、主要指标", "observation": "要求按真实单位隔离新数据，并明确方案与资源尚未获授权冻结或运行。"}
+      ],
+      "failure_findings": [],
+      "unverified": ["实际数据管线隔离", "过去已通过Gate的真实持久状态回退"]
+    },
+    {
+      "case_id": "T18",
+      "assessment": "passed",
+      "criteria": [
+        {"expectation_index": 1, "judgement": "passed", "evidence_quote": "两状态受控模型可以用于给出反例、检验局部规则和寻找可行性边界，不必先证明真实海上工程效果"},
+        {"expectation_index": 2, "judgement": "passed", "evidence_quote": "尚未提供模型定义和证明，当前不能认定不可能性命题已经成立，也不能判断它的原创性"},
+        {"expectation_index": 3, "judgement": "passed", "evidence_quote": "先检验较弱的存在性反例，再看能否给出保持原计划可行性的充分条件"}
+      ],
+      "failure_findings": [],
+      "unverified": ["具体命题的正确性与原创性"]
+    }
+  ]
+}

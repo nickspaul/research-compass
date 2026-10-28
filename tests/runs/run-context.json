@@ -1,0 +1,58 @@
+{
+  "run_date": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "release_version": "1.0.0",
+  "host": "Codex desktop; collaboration subagents",
+  "exact_model_identifier": "not exposed; inherited parent configuration",
+  "round_1": {
+    "context_record": "round-1-context.json",
+    "entrypoint_snapshot": "round-1-SKILL.txt",
+    "distinct_cases": 15,
+    "passed": 13,
+    "failed": [
+      "T03",
+      "T05"
+    ],
+    "setup": "Three fresh executors, five inputs each; not fresh per individual case"
+  },
+  "round_2": {
+    "cases": [
+      "T03",
+      "T05"
+    ],
+    "setup": "One fresh executor per case; explicit-load",
+    "passed": 2,
+    "instruction_fingerprint_sha256": "668028fde9664093a84df25159be14700abdd6065a77884d88a726b5d4f28fcd",
+    "instruction_file_sha256": {
+      "SKILL.md": "6c7fea4cb1bb38ed496f318b7b1539371e05c19d7344b784219a18d23534ff7a",
+      "references/evidence-standards.md": "2d931f13cc30647ddcf420e848a72e63792df6fc9b14d63e281c85ea09ed836d",
+      "references/pace-protocol.md": "3ddd776a21b2b4af59e0b0d75f6d03d7e7da4e56491319527f7ebe519aa9a693",
+      "references/research-gates.md": "fd7ccc807030fde80fd6020e6042ba25cf88f5b02fa01bf3aaeb7699f1e057f0",
+      "references/research-principles.md": "fc293a8381e02ea03c8a718e4312c995796d771acc71bfdfaae10f9aeae3f557",
+      "assets/experiment-precommitment.md": "5761eee5619c7ebcfeff1c91e215ac148f59bb4c5e83da8047b89c444c759b1b",
+      "assets/novelty-stress-test.md": "d047ec98d721cf2a7428c5cd3b103a3e05a727218f4f320d514512c101eac683",
+      "assets/research-decision-log.md": "c5fbf2c081840b95cc863dcacf4487ddcf97132cce171eb552fec3f3117001a3",
+      "assets/research-problem-card.md": "ad35a6cec79332df84619fc7538a5ff550c32a63d2ed8ba6744fcc670160d9f2",
+      "assets/result-reality-check.md": "5dddb9f8f1bb8309f8ce64f897627124e43c8dd37489b4098739575fe4dacd8d"
+    },
+    "read_and_write_summary": "retest_03 read SKILL, evidence, gates; retest_05 read SKILL, gates, evidence, pace, precommitment template; each wrote only its assigned response. No expected/failure rubric supplied."
+  },
+  "source_constraints": "Skill and input artifacts only; no network, project research artifacts or scientific computation",
+  "round_1_c_operations": "Read Skill, input JSON, four references, problem/precommitment/log templates and fictional T16 card; used UTC clock; wrote five responses and appended fictional T16 record.",
+  "review_records": [
+    "review-ab.json",
+    "review-c.json",
+    "review-retests.json"
+  ],
+  "tool_evidence_limit": "Executor summaries retained; complete per-tool system transcripts not exported. T16 before/after files directly compared by root.",
+  "not_verified": [
+    "Final revision full-corpus regression",
+    "Natural host discovery and activation",
+    "T08 natural-selection component",
+    "Cross-model and repeated-session reliability",
+    "Multi-turn persistent state recovery",
+    "Scientific truth of hypothetical inputs",
+    "Real external data, resources or literature"
+  ],
+  "corpus_sha256": "e2e116c2c8078b44f78be81977c3047f7688953d332b55077a831a17546f1c8e"
+}

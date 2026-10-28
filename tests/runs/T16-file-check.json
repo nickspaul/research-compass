@@ -1,0 +1,8 @@
+{
+  "fictional_fixture": true,
+  "before_sha256": "4a3bf7a31cb789175c7097904a3f9eba59c541eadc8785b916b4e31d0903159e",
+  "after_sha256": "dc33f6a4fc6eca40fa50c8ebd21826194c34827e8f8c8c701efba330ae2d3f0b",
+  "original_bytes_preserved_as_prefix": true,
+  "original_text_preserved_as_prefix": true,
+  "new_record_created": true
+}

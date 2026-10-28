@@ -1,0 +1,29 @@
+{
+  "scope": "validator negative controls, not Skill behavior",
+  "results": [
+    {
+      "control": "invalid_name",
+      "expected_detection": "Invalid skill name",
+      "detected": true,
+      "exit_code": 1
+    },
+    {
+      "control": "missing_reference",
+      "expected_detection": "Broken link",
+      "detected": true,
+      "exit_code": 1
+    },
+    {
+      "control": "absolute_local_link",
+      "expected_detection": "Machine-local link",
+      "detected": true,
+      "exit_code": 1
+    },
+    {
+      "control": "duplicate_case_id",
+      "expected_detection": "duplicate case id",
+      "detected": true,
+      "exit_code": 1
+    }
+  ]
+}
